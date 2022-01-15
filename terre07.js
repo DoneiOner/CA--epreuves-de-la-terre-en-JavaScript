@@ -1,6 +1,6 @@
 #!usr/bin/env ruby
 
-=begin
+/*
 ************************ Taille d’une chaîne
 
 Créez un programme qui affiche le nombre de caractères d’une chaîne de caractères passée en argument.
@@ -18,27 +18,26 @@ erreur.
 $> python exo.py 10
 erreur.
 
-=end
+*/
 
-string = ARGV[0]
 
-#puts string.inspect
 
-#gestion des erreurs d'entree utilisateur
-if ARGV[0] == nil 
-    puts "erreur."
-    abort 
-end
+// gestion des erreurs
+if (process.argv[2] == null){
+    console.log('Erreur.');
+    return;
+}
+//console.log(process.argv);
+//console.log(process.argv[2]);
+if (process.argv[3] != null) {
+    console.log('Erreur.');
+    return;
+}
 
-if ARGV[1] != nil
-    puts "erreur."
-    abort
-end
+//parsing
+var string = process.argv[2];
+//console.log(string);
 
-if ARGV[0].to_i.to_s == ARGV[0]
-    puts "erreur."
-    abort 
-end
 
-#affichage : 
-puts string.length
+// resolution
+console.log(string.length);
