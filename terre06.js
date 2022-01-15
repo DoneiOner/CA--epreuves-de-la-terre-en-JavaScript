@@ -15,7 +15,7 @@ Attention : je compte sur vous pour gérer les potentielles erreurs d’argument
 # on a la method .reverse!
 # mais je suppose que ce n'est pas le but de l'exercice
 */
-// on choppe la string en argument, direction un tableau
+
 var tableau = [];
 
 if (process.argv[2] == null) {
@@ -29,8 +29,6 @@ for (i = 2; i < process.argv.length; i++) {
 
 var string_to_reverse = tableau.join(' ');
 //console.log(string_to_reverse);
-
-//console.log(string_to_reverse.length);
 
 for (i = string_to_reverse.length; i != -1; i--) {
     process.stdout.write(string_to_reverse.substring(i, i+1));
