@@ -11,20 +11,6 @@ $> ruby exo.rb 11:40PM
 23:40
 
 Attention : midi et minuit.
-
-end
-
- recuperer argument en format 24h
- splitter les heures et les minutes
-
-minuit : 12AM (midnight)                       ======> ex : 12:15 AM                   
-de 01:00 à 11:59=> AM                          ==========>    afficher ARGV[0] + "PM"
-midi  12PM (noon)  
-de 12:01 à 12:59 => PM                         ===========>   afficher ARGV[0] + "PM"
-de 13:00 à 23:59 => PM                        ===========> afficher ARGV[0] - 12 + "PM"
-
-
- afficher en format 12h
 */
 
 
@@ -72,40 +58,12 @@ if (am_ou_pm == "PM") {
     else { heure = heure + 12}
 }
 
-
-
 if (heure >= 24) {
    console.log("Erreur.");
    return
 }
 
+// affichage
 console.log ("En Français : " + heure + "h" + minute );
 
-   /* when "AM"                ## 12:15AM c'est minuit et quart
-        then if heure ==12
-            then
-                heure = "00" 
-        else 
-            heure = heure
-        end           
-        */              //  #=====> on ne change pas l'heure , de 00:01AM à 11:59
-
-    /*when "PM" ,  (heure == 12)               # =====> 12:15PM c'est midi et quart
-        then if heure == 12 
-            then
-                 heure = 12
-        else 
-            heure += 12
-        end
-    else
-        puts "Erreur..."
-end
-
-if heure.to_i >= 24 then 
-    puts "Erreur."
-    abort
-end
-
-puts "En Français : #{heure.to_s}h#{minute.to_s}"
-
-*/
+ 
