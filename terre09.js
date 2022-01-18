@@ -8,11 +8,6 @@ $> node exo.js 9
 3
 
 Attention : je compte sur vous pour gérer les potentielles erreurs d’arguments.
-
-
-
-puts Math.sqrt(nombre1.to_i)
-
 */
 
 // gestion des erreurs

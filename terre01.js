@@ -1,4 +1,4 @@
-#!usr/bin/env ruby
+
 
 /*
 ************************* Nom du programme

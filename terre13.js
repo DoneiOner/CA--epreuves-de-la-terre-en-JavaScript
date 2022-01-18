@@ -1,4 +1,4 @@
-#!usr/bin/env ruby
+
 
 /*
     ************************* Trouver la Suisse (lol)
@@ -14,7 +14,6 @@ $> ruby exo.rb 2 1 3
 
 $> ruby exo.rb 2 2 2
 erreur.
-
 */
 
 // GESTION DES ERREURS

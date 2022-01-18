@@ -1,4 +1,3 @@
-#!usr/bin/env ruby
 
 /*
     **************************** Puissance d’un nombre

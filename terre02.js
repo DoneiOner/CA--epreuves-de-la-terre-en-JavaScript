@@ -1,4 +1,4 @@
-#!usr/bin/env ruby
+
 
 /*
 ************************** Afficheur d’arguments
@@ -23,10 +23,3 @@ for (i=2; i<process.argv.length; i++)
 console.log(process.argv[i])
 
 
-/*
-# oui, l'argument passé est bien stocké sous forme de string dans le tableau ARGV
-# je n'ai plus qu'a boucler sur le tableau ARGV et a afficher
-ARGV.each do |argument|
-    puts argument
-
-*/

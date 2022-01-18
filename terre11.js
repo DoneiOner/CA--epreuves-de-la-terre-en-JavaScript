@@ -1,5 +1,3 @@
-#!usr/bin/env ruby
-
 /*
     
 
@@ -13,24 +11,6 @@ $> ruby exo.rb 23:40
 11:40PM
 
 Attention : midi et minuit.
-
-    
-
-
- recuperer argument en format 24h
- splitter les heures et les minutes
-
-minuit : 12AM (midnight)                       ======> ex : 12:15 AM                   
-de 01:00 à 11:59=> AM                          ==========>    afficher ARGV[0] + "PM"
-midi  12PM (noon)  
-de 12:01 à 12:59 => PM                         ===========>   afficher ARGV[0] + "PM"
-de 13:00 à 23:59 => PM                        ===========> afficher ARGV[0] - 12 + "PM"
-
-
- afficher en format 12h
-=end
-
-
 */
 
 // gestion des erreurs

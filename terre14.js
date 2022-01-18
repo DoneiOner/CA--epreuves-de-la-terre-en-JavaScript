@@ -1,5 +1,3 @@
-#!usr/bin/env ruby
-
 /*
     
 **************************** Trié ou pas
@@ -15,7 +13,6 @@ Triée !
 
 $> ruby exo.rb “Salut”
 erreur.
-
 */
 
 var saisie = process.argv;

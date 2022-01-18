@@ -1,4 +1,3 @@
-#!usr/bin/env ruby
 
 /*
    ************************** Terre : ok 
@@ -11,7 +10,6 @@ J’ai terminé l’Épreuve de la Terre et c’était [].
 $>
 
 Note : [] est à remplacer par un adjectif de votre choix (facile ?)
-
 */
 
 console.log("Donei Oner a terminé l'épreuve de la Terre le dimanche 9 janvier 2K22 et c'était STI-MU-LANT et RAGEANT ... ENCOU-RAGEANT");

@@ -1,4 +1,3 @@
-#!usr/bin/env ruby
 
 /*
 ************************ Taille d’une chaîne

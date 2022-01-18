@@ -1,4 +1,4 @@
-#!usr/bin/env ruby
+
 
 /*
     ************************** DIVISIONS
@@ -20,22 +20,6 @@ erreur.
 #il semble que les divisions par defaut de ruby soient par integers. ok pour cet exo !!
 # je compte utiliser le modulo pour le reste.
 # et afficher "erreur" si le reste est un float ou que le diviseur est zero
-
-if diviseur == 0 
-puts "erreur"
-abort
-end
-
-resultat = (a_diviser / diviseur)
-reste = a_diviser % diviseur
-
-if reste > resultat
-puts "erreur"
-abort
-end
-
-puts "resultat: #{resultat}"
-puts "reste: #{reste}"
 
 */
 var a_diviser = parseInt(process.argv[2])
