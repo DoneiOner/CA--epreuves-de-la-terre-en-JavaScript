@@ -1,6 +1,6 @@
 #!usr/bin/env ruby
 
-=begin
+/*
     ************************* Trouver la Suisse (lol)
 
     Créez un programme qui prend en paramètre trois entiers et affiche la valeur du milieu.
@@ -15,45 +15,45 @@ $> ruby exo.rb 2 1 3
 $> ruby exo.rb 2 2 2
 erreur.
 
-=end
+*/
+
+// GESTION DES ERREURS
+var saisie = process.argv;
+console.log(saisie);
+var test_saisie = new RegExp('^[0-9]+$');
+if (((!test_saisie.test(saisie[2]) ||  (saisie[2] == null )) || ((!test_saisie.test(saisie[3]) || (saisie[3] == null )) || ((!test_saisie.test(saisie[4]) || (saisie[4] == null))
+|| (saisie[5] != null))))) {
+    console.log(' Erreur.');
+    return;
+}
+
+// PARSING
+var a = parseInt(saisie[2]);
+var b = parseInt(saisie[3]);
+var c = parseInt(saisie[4]);
+var result = 'd';
+
+// GESTION D'ERREUR
+if ( a == b || a == c || b ==c ) {
+    console.log('Erreur.');
+    return;
+}
+
+// RESOLUTION
+
+if  (( a < b && b < c ) || ( a > b && b > c )) {
+    result = b;
+} else if  (( b < a && a < c ) || ( b > a && a > c)) {
+    result = a;
+} else if  (( a < c && c < b ) || ( a > c && c > b)) {
+    result = c;
+} else {
+    console.log("Erreur.");
+}
+console.log("La valeur du milieu est " + result);
 
 
 
 
-# verifier mauvais arguments
-
-if ( /\D/.match("#{ARGV[0]}") || /\D/.match("#{ARGV[1]}") || /\D/.match("#{ARGV[2]}" || ARGV[0] == nil || ARGV[1} == nil || ARGV[2] == nil )
-    puts "tu pensais me la mettre?"
-    abort
-end
-
-# recuperer les arguments
-# mettre les arguments dans un tableau
-
-tableau = [ ARGV[0], ARGV[1], ARGV[2] ]
-#puts tableau.inspect
-
-a = tableau[0].to_i
-b = tableau[1].to_i
-c = tableau[2].to_i
-# comparer les arguments
-if          ( a < b && b < c ) || ( a > b && b > c )
-    then 
-    result = b
-elsif       ( b < a && a < c ) || ( b > a && a > c)
-    then 
-    result = a
-elsif       ( a < c && c < b ) || ( a > c && c > b)
-    then 
-    result = c    
-else
-    puts "Erreur."
-    abort
-end
-    
-puts "#{result}"
 
 
-# si 2 ou plus arguments identiques => erreur
-
-# afficher la valeur du milieu
