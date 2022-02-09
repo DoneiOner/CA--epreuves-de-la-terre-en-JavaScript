@@ -32,40 +32,58 @@ if ((!test_saisie.test(process.argv[2]) || process.argv[3] != null)){
     console.log('tu pensais me la mettre? => Erreur.');
     return;
 }
+
+
+
+
+
 // parsing
 
-var nombre_a_tester = process.argv[2];
+function isPrime(nombre_a_tester) {
 
-if ((nombre_a_tester == 1) || (nombre_a_tester == 0 )) {
-    console.log('Non, ' + nombre_a_tester + " n'est pas un nombre premier.");
-    return;
-}
+    if ((nombre_a_tester < 2)) {
+        console.log('Non, ' + nombre_a_tester + " n'est pas un nombre premier.");
+        process.exit(0);
+    }
+
+    if (nombre_a_tester == 2 ) {
+        console.log('Oui, 2 est un nombre premier');
+        process.exit(0);
+    }
+
+    if(nombre_a_tester%2 === 0) {
+        console.log('Non, ' + nombre_a_tester + " n'est pas un nombre premier.");
+        process.exit(0);
+    }
+
+    
 
 
-// resolution
 
-nombre_a_tester = parseInt(nombre_a_tester);
+    var racine = Math.sqrt(nombre_a_tester);
 
-var resultat_division;
-var modulo;
-for (i = 2; i <= nombre_a_tester; i++) {
+    if(racine == parseInt(racine)) {
+        console.log('Non, ' + nombre_a_tester + " n'est pas un nombre premier.");
+        process.exit(0);
+    }
 
-resultat_division = (nombre_a_tester / i);
-modulo = (nombre_a_tester % i);
-//console.log(i + " = i");
-//console.log(nombre_a_tester + " = nombre a tester");
-//console.log(resultat_division + " = resultat division");
-//console.log(modulo + "  = modulo");
-//console.log(i);
-//console.log((typeof nombre_a_tester) + ' = type de nombre a tester');
-    if ((Number.isInteger(resultat_division)) && (modulo == 0) && (nombre_a_tester != i)) {
+
+    for ( let i = 3; i<=racine; i+=2) {
         
+        
+        if(nombre_a_tester%i === 0) {
+            
             console.log('Non, ' + nombre_a_tester + " n'est pas un nombre premier.");
             return;
         }
         
-    else {
+        
+        
+    }
     console.log("Oui, " + nombre_a_tester + " est un nombre premier.");
     return;
+
     }
-    }
+
+
+isPrime(parseInt(process.argv[2]));

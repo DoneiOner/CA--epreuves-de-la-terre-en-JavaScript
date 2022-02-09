@@ -1,4 +1,3 @@
-
 /*
 ************************ Taille d’une chaîne
 
@@ -19,24 +18,26 @@ erreur.
 
 */
 
-
-
 // gestion des erreurs
-if (process.argv[2] == null){
+if (process.argv[2] == null) {
     console.log('Erreur.');
-    return;
+    process.exit(0);
 }
 //console.log(process.argv);
 //console.log(process.argv[2]);
 if (process.argv[3] != null) {
     console.log('Erreur.');
-    return;
+    process.exit(0);
+}
+
+if (!isNaN (process.argv[2])) {
+    console.log('Erreur.');
+    process.exit(0);
 }
 
 //parsing
 var string = process.argv[2];
 //console.log(string);
-
 
 // resolution
 console.log(string.length);
